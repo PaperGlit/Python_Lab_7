@@ -1,6 +1,6 @@
 from GlobalVariables import *
 from BLL.classes.unit_of_work import UnitOfWork
-from DAL.classes.database_handler import History
+from DAL.classes.database_handler import DBHandler
 from BLL.classes.network_request import NetworkRequest
 from rich.console import Console as RichConsole
 from rich.table import Table
@@ -18,7 +18,7 @@ class Console:
 
     def __init__(self):
         self.uow = UnitOfWork(base_api_url)
-        self.db_handler = History()
+        self.db_handler = DBHandler()
         self.main()
 
     def show_history(self):
