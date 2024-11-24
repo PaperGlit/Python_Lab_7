@@ -4,7 +4,7 @@ import sqlite3
 
 
 class History:
-    def __init__(self, db_name="prompt_history.db"):
+    def __init__(self, db_name="DAL/assets/prompt_history.db"):
         self.connection = sqlite3.connect(db_name)
         self.cursor = self.connection.cursor()
         self.create_table()
